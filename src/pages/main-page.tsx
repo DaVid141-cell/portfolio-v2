@@ -1,10 +1,10 @@
-import { NavBar } from "../components/navbar"
+import { MainLayout } from "../components/layouts/main-layout"
+import { GridBox } from "../components/ui/grid-boxes"
 
 export default function MainPage() {
     return (
-        <div>
-            <NavBar/>
-            <h1>Hello</h1>
-        </div>
+        <MainLayout>
+            <GridBox/>
+        </MainLayout>
     )
 }
