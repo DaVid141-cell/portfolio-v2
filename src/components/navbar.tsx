@@ -10,17 +10,15 @@ export function NavBar() {
     ]
     
     return (
-        <div className="w-100 h-100 ">
-            <nav className="p-10">
-                <div className="p-10">
-                    {NavItems.map((item) => (
-                        <NavLink to={item.route} key={item.route}>
-                            {item.label}
-                        </NavLink>
+        <nav className="w-100 bg-accent-foreground p-4 my-8 sticky rounded-r-4xl ">
+            <div className="justify-around flex">
+                {NavItems.map((item) => (
+                    <NavLink to={item.route} key={item.route} className="text-lg font-bold">
+                        {item.label}
+                    </NavLink>
 
-                    ))}
-                </div>
-            </nav>
-        </div>
+                ))}
+            </div>
+        </nav>
     )
 }
