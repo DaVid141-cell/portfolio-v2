@@ -1,6 +1,6 @@
-import { NavBar } from "../components/Navbar"
+import { NavBar } from "../components/navbar"
 
-export default function () {
+export default function MainPage() {
     return (
         <div>
             <NavBar/>
