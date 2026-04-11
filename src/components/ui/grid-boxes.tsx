@@ -35,7 +35,7 @@ export function GridBox () {
                     width: "500px",
                     height: "500px",
                     borderRadius: "50%",
-                    background: "radial-gradient(circle, rgba(220,30,30,0.55) 0%, rgba(180,0,0,0.18) 45%, transparent 70%)",
+                    background: "radial-gradient(circle, rgba(160,38,255,0.55) 0%, rgba(144,38,255,0.18) 45%, transparent 70%)",
                     transform: "translate(-50%, -50%)",
                     zIndex: 0,
                 }}
@@ -70,8 +70,8 @@ export function GridBox () {
                     return (
                         <div
                             key={i}
-                            className="bg-foreground shadow-xl/50"
-                            style={{ borderRadius: radius, }}
+                            className="bg-foreground shadow-xl/60"          // grid boxes styles
+                            style={{ borderRadius: radius}}
                         />
                     )
                 })}
