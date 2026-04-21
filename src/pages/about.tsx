@@ -1,8 +1,8 @@
 export default function AboutPage () {
     return (
-        <section id="about" className="">
+        <div className="w-full">
             {/*About me content */}
-            <div className="w-full bg-[#111111]">
+            <div className="w-full h-100 relative bg-[#111111] z-1">
                 <h1>mee</h1>
             </div>
 
@@ -11,7 +11,7 @@ export default function AboutPage () {
             {/* Education section */}
             <div className="w-full relative min-h-screen bg-[#0d0d0d]">
                 {/* Spot light */}
-                <div className="w-210 h-30  absolute top-20 left-70 bg-[#7226FF] rounded-r-full rotate-40 blur-3xl opacity-50"/>
+                <div className="w-210 h-30 absolute top-20 left-70 bg-[#7226FF] rounded-r-full rotate-40 blur-3xl opacity-50"/>
                 <div className="bg-[#A026FF] absolute w-150 h-15 top-20 left-91 rounded-r-4xl rotate-40 blur-xl"/>
             
 
@@ -64,7 +64,7 @@ export default function AboutPage () {
 
             {/*Skills contents */}
 
-        </section>
+        </div>
     )
 }
 
