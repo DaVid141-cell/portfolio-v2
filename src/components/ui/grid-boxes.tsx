@@ -23,7 +23,7 @@ export function GridBox () {
 
     return (
         <div
-            className="fixed inset-0 z-0 overflow-hidden bg-foreground"
+            className="absolute inset-0 z-0 overflow-hidden bg-foreground "
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
         >
