@@ -1,19 +1,19 @@
-import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import { Play } from "lucide-react";
+import { href, NavLink } from "react-router-dom";
 
 export function NavBar() {
     const [isOpen, setIsOpen] = useState(true)
 
     const NavItems = [
-        {   route: "/", label: "Home" },
-        {   route: "/about", label: "About" },
-        {   route: "/projects", label: "Project" },
-        {   route: "/contacts", label: "Contact" }
-    ]
+        { href: "/", label: "Home" },
+        { href: "#about", label: "About" },
+        { href: "#projects", label: "Project" },
+        { href: "#contacts", label: "Contact" }
+    ];
     
     return (
-        <nav className="relative w-fit bg-accent-foreground my-8 rounded-r-4xl">
+        <nav className="fixed w-fit bg-accent-foreground my-8 rounded-r-4xl z-100">
         
             <div className="flex items-center gap-8 px-6 py-4">
                 {/* Nav Items */}
@@ -22,13 +22,13 @@ export function NavBar() {
                     style={{ maxWidth: isOpen ? "400px" : "0px", opacity: isOpen ? 1 : 0 }}> 
                     
                     {NavItems.map((item) => (
-                        <NavLink
-                            to={item.route}
-                            key={item.route}
+                        <a
+                            href={item.href}
+                            key={item.href}
                             className="text-lg font-bold whitespace-nowrap"
                         >
                             {item.label}
-                        </NavLink>
+                        </a>
                     ))}
                 </div>
 
