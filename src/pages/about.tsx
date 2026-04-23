@@ -21,7 +21,7 @@ export default function AboutPage () {
 
                 <div className="pt-55 pl-30">
                     <h1 className="text-3xl font-bold">
-                        Education
+                        EDUCATION
                     </h1>
                     <div className="w-full max-w-300">
                         <div className="flex row uppercase items-center font-bold text-lg mt-4 mb-4 border-b-2 border-cus-grey">
