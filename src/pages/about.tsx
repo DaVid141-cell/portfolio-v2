@@ -1,9 +1,13 @@
+import { AboutMeSec } from "../components/about-me-sec";
+
 export default function AboutPage () {
+
+   
     return (
         <div className="w-full">
             {/*About me content */}
-            <div className="w-full h-100 relative bg-[#111111] z-1">
-                <h1>mee</h1>
+            <div className="w-full min-h-screen relative bg-[#111111] z-1">
+                <AboutMeSec/>
             </div>
 
 
@@ -15,16 +19,16 @@ export default function AboutPage () {
                 <div className="bg-[#A026FF] absolute w-150 h-15 top-20 left-91 rounded-r-4xl rotate-40 blur-xl"/>
             
 
-                <div className="w-90 absolute left-260 top-100 select-none z-2">
+                <div className="w-110 absolute left-260 top-104 select-none z-1 overflow-hidden opacity-80">
                     <img src="/src/assets/about-img.webp" alt="about-img" loading="lazy"/>
                 </div>
 
                 <div className="pt-55 pl-30">
-                    <h1 className="text-3xl font-bold">
+                    <h1 className="text-5xl font-bold">
                         EDUCATION
                     </h1>
-                    <div className="w-full max-w-300">
-                        <div className="flex row uppercase items-center font-bold text-lg mt-4 mb-4 border-b-2 border-cus-grey">
+                    <div className="w-full max-w-fit">
+                        <div className="flex row uppercase items-center font-bold text-2xl mt-4 mb-4 border-b-2 border-cus-grey">
                             <div className="col p-8 ">
                                 <h3>Now</h3>
                             </div>
@@ -35,7 +39,7 @@ export default function AboutPage () {
                                 </p>
                             </div>
                         </div>
-                        <div className="flex row uppercase items-center font-bold text-lg mt-4 mb-4 border-b-2 border-cus-grey">
+                        <div className="flex row uppercase items-center font-bold text-2xl mt-4 mb-4 border-b-2 border-cus-grey">
                             <div className="col p-8 ">
                                 <h3>Now</h3>
                             </div>
@@ -46,8 +50,8 @@ export default function AboutPage () {
                                 </p>
                             </div>
                         </div>
-                        <div className="flex row uppercase items-center font-bold text-lg mt-4 mb-4 border-b-2 border-cus-grey">
-                            <div className="col p-3 shrink-0">
+                        <div className="flex row uppercase items-center font-bold text-2xl mt-4 mb-4 border-b-2 border-cus-grey">
+                            <div className="col p-1 shrink-0">
                                 <h3>2022-2024</h3>
                             </div>
                             <div className="col p-8">
@@ -63,9 +67,24 @@ export default function AboutPage () {
             </div>
 
             {/*Skills contents */}
-
         </div>
     )
 }
 
 
+{/*
+     
+                        <div className="bg-[#2a2a2a] h-58 manga-box-1" />
+
+
+                        <div className="bg-[#1a1a1a] w-150 h-58 col-span-2 px-10
+                            [clip-path:polygon(10%_0%,100%_0%,100%_100%,0%_100%)]">
+                            <h1 className="text-white text-5xl font-black tracking-tight">I'M DAVID</h1>
+                        </div>
+
+                        <div className="absolute bg-[#1a1a1a] w-150 h-58 col-span-2 px-10
+                            [clip-path:polygon(10%_0%,100%_0%,100%_100%,0%_100%)]">
+                            <h1 className="text-white text-5xl font-black tracking-tight">I'M SERAD</h1>
+                        </div>
+    
+    */}
