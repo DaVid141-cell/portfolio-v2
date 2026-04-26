@@ -70,21 +70,3 @@ export default function AboutPage () {
         </div>
     )
 }
-
-
-{/*
-     
-                        <div className="bg-[#2a2a2a] h-58 manga-box-1" />
-
-
-                        <div className="bg-[#1a1a1a] w-150 h-58 col-span-2 px-10
-                            [clip-path:polygon(10%_0%,100%_0%,100%_100%,0%_100%)]">
-                            <h1 className="text-white text-5xl font-black tracking-tight">I'M DAVID</h1>
-                        </div>
-
-                        <div className="absolute bg-[#1a1a1a] w-150 h-58 col-span-2 px-10
-                            [clip-path:polygon(10%_0%,100%_0%,100%_100%,0%_100%)]">
-                            <h1 className="text-white text-5xl font-black tracking-tight">I'M SERAD</h1>
-                        </div>
-    
-    */}
