@@ -34,6 +34,9 @@ export function AboutMeSec() {
 
     return (
         <div className="relative flex justify-center items-center w-full min-h-screen px-10 pt-16">
+            <div className="absolute -rotate-90 left-75">
+                <h1 className="text-6xl font-bold overline">ABOUT ME</h1>
+            </div>
 
             {/* Spotlight */}
             <div className="absolute -top-200 left-1/2 -translate-x-1/2 w-300 h-300 bg-[#7226FF] rotate-40 blur-3xl opacity-40 rounded-full overflow-hidden "/>
