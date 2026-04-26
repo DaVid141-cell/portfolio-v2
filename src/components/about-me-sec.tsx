@@ -1,4 +1,6 @@
 import { Code, Heart, Lightbulb, Users } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
+import { motion } from "framer-motion"
 
 const info = [
     { label: "Age", value: "20" },
@@ -8,25 +10,100 @@ const info = [
 ]
 
 export function AboutMeSec() {
+
+    const [mousePointer, setMousePointer] = useState({ x: 0, y: 0 });
+    const [isHovered, setIsHovered] = useState(false);
+
+    useEffect(() => {
+        const setFormEvent = (e: MouseEvent) => {
+            const rect = containerRef.current?.getBoundingClientRect();
+            if (rect) {
+                    setMousePointer({
+                        x: e.clientX - rect.left,
+                        y: e.clientY - rect.top,
+                    });
+                }
+            };
+        window.addEventListener("mousemove", setFormEvent);
+
+        return () => window.removeEventListener("mousemove", setFormEvent);
+    }, []);
+
+    const size = isHovered ? 150 : 30;
+    const containerRef = useRef<HTMLDivElement>(null);
+
     return (
-        <div className="relative flex justify-center items-center w-full min-h-screen px-10 pt-16 overflow-hidden">
+        <div className="relative flex justify-center items-center w-full min-h-screen px-10 pt-16">
 
             {/* Spotlight */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#7226FF] blur-[120px] opacity-30 rounded-full pointer-events-none" />
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[300px] h-[300px] bg-[#A026FF] blur-[80px] opacity-50 rounded-full pointer-events-none" />
+            <div className="absolute -top-200 left-1/2 -translate-x-1/2 w-300 h-300 bg-[#7226FF] rotate-40 blur-3xl opacity-40 rounded-full overflow-hidden "/>
+            <div className="absolute -top-100 left-1/2 -translate-x-1/2 w-150 h-150 bg-[#A026FF] rotate-40 blur-3xl opacity-80 rounded-full overflow-hidden "/>
 
-            {/* Main card */}
+             {/* Main card */}
             <div className="relative w-full max-w-4xl overflow-hidden shadow-2xl bg-foreground m-20">
                 <div className="grid gap-2 p-4 bg-background"
                     style={{
                         gridTemplateColumns: "1fr 1fr 0.8fr",
                         gridTemplateRows: "auto auto auto auto",
                     }}>
-                    
-                    {/* MaskedCursor container */}
-                    
-                        
-                    
+
+                   {/* Row 1 — Image + Name with mask hover effect */}
+                    <div ref={containerRef} className="relative h-58 col-span-3 overflow-hidden flex">
+
+                        {/* Normal layer — always visible */}
+                        <div className="flex w-full h-full">
+                            {/* Left — image placeholder */}
+                            <div className="bg-background h-full manga-box-1 shadow-2xl border-2"
+                                style={{ width: "33%" }}
+                            >
+                                {/* Image here */}
+                                <img className="w-60 flex relative bottom-15" src="/src/assets/fixed-me.webp"/>
+                            </div>
+
+                            {/* Right — normal text */}
+                            <div className="bg-[#1a1a1a] flex-1 flex items-center justify-center px-10 manga-box-2">
+                                <h1 className="text-white text-6xl font-black tracking-tight">I'M DAVID</h1>
+                            </div>
+                        </div>
+
+                        {/* Mask layer — revealed on hover */}
+                        <motion.div
+                            className="absolute inset-0 flex"
+                            animate={{
+                                webkitMaskPosition: `${mousePointer.x - size / 2}px ${mousePointer.y - size / 2}px`,
+                                webkitMaskSize: `${size}px`,
+                            }}
+                            transition={{ ease: "backOut", duration: 0.4 }}
+                            style={{
+                                WebkitMaskImage: "url('/src/assets/mask.webp')",
+                                WebkitMaskRepeat: "no-repeat",
+                            }}
+                        >
+                            {/* Left — revealed image */}
+                            <div
+                                className="bg-background h-full flex items-center justify-center manga-box-1"
+                                style={{ width: "33%" }}
+                                onMouseEnter={() => setIsHovered(true)}
+                                onMouseLeave={() => setIsHovered(false)}
+                            >
+                                {/* Different image or color revealed here */}
+                                <img className="w-200" src="/src/assets/aizen-fix.webp"/>
+                            </div>
+
+                            {/* Right — revealed text */}
+                            <div
+                                className="bg-[#A026FF] flex-1 flex items-center justify-center px-10 manga-box-2"
+                                onMouseEnter={() => setIsHovered(true)}
+                                onMouseLeave={() => setIsHovered(false)}
+                            >
+                                <h1 className="text-white text-6xl font-black tracking-tight cursor-default ml-10">
+                                    I'M FULL STACK DEVELOPER
+                                </h1>
+                            </div>
+                        </motion.div>
+
+                    </div>
+
                     {/* Row 2 trait 1 */}
                     <div className=" p-6 flex flex-col gap-3 border-2 shadow-lg">
                         <div className="bg-black rounded-xl p-2 w-fit">
