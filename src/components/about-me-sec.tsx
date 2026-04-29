@@ -90,7 +90,7 @@ export function AboutMeSec() {
                                 onMouseLeave={() => setIsHovered(false)}
                             >
                                 {/* Different image or color revealed here */}
-                                <img className="w-200" src="/src/assets/aizen-fix.webp"/>
+                                <img className="w-55 flex relative bottom-5 right-5" src="/src/assets/manga-aizen.webp"/>
                             </div>
 
                             {/* Right — revealed text */}
@@ -153,7 +153,7 @@ export function AboutMeSec() {
                         <p className="text-sm text-muted-foreground leading-relaxed">Believing in the power of teamwork and open communication to achieve greatness.</p>
                     </div>
 
-                    {/* Row 4 — Bio spans all 3 columns */}
+                    {/* Row 4 */}
                     <div className=" col-span-3 p-8 border-2 shadow-lg">
                         <p className="text-black leading-relaxed text-sm max-w-3xl">
                             I'm a Software Engineering student specializing in building fast, scalable, and SEO-friendly 
@@ -163,7 +163,7 @@ export function AboutMeSec() {
                             I'm Motivated to build meaningful projects, gain hands-on experience, and continuously grow as a developer. 
                             Dedicated to applying creativity, persistence, and problem-solving skills to deliver quality results.
                             And I'm also exploring 
-                            Data Science, Machine Learning, and Game Development.To constantly refine my skills with every project I make.
+                            Data Science, Machine Learning, and Game Development. To constantly refine my skills with every project I make.
                         </p>
                     </div>
                 </div>
