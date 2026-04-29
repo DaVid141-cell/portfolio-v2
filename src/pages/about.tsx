@@ -1,4 +1,5 @@
 import { AboutMeSec } from "../components/about-me-sec";
+import { SkillSec } from "../components/skills-sec";
 
 export default function AboutPage () {
 
@@ -9,8 +10,6 @@ export default function AboutPage () {
             <div className="w-full min-h-screen relative bg-[#111111] z-1">
                 <AboutMeSec/>
             </div>
-
-
 
             {/* Education section */}
             <div className="w-full relative min-h-screen bg-[#0d0d0d]">
@@ -67,6 +66,9 @@ export default function AboutPage () {
             </div>
 
             {/*Skills contents */}
+            <div className="min-h-screen w-full">
+                <SkillSec/>
+            </div>
         </div>
     )
 }
