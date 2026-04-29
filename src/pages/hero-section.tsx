@@ -26,13 +26,10 @@ export function HeroSection () {
                 </div>
 
                 {/*Small information */}
-                <div className="absolute top-60 left-28 w-100 ">
-                    <article>
-                        <h2 className="text-3xl font-bold mb-2">
-                        I'm a Full Stack Developer
-                        </h2>
-                        <p className="text-lg text-justify">A software engineer passionate about turning ideas into real, functional products on the web. I craft digital experiences that are both functional and visually intentional  and always open to new things and new opportunities. Let's build something great together.</p>
-                    </article>
+                <div className="absolute top-170 left-28 w-110 h-fit text-center">
+                    <span className="text-3xl font-bold">Aspiring Full Stack Developer</span>
+                    <br/>
+                    <span className="text-xl font-semibold ">Design. Build. Deliver.</span>
                     
                 </div>
 
