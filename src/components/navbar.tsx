@@ -1,9 +1,16 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Play } from "lucide-react";
-import { href, NavLink } from "react-router-dom";
 
 export function NavBar() {
-    const [isOpen, setIsOpen] = useState(true)
+    const [isOpen, setIsOpen] = useState(false)
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setIsOpen(true)
+        }, 300) 
+
+        return () => clearTimeout(timer)
+    }, [])
 
     const NavItems = [
         { href: "/", label: "Home" },
