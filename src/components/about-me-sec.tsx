@@ -1,6 +1,6 @@
 import { Code, Heart, Lightbulb, Users } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
-import { motion } from "framer-motion"
+import { motion, useAnimation, useInView } from "framer-motion"
 
 const info = [
     { label: "Age", value: "20" },
@@ -9,6 +9,7 @@ const info = [
     { label: "Gmail", value: "chaosdudeserad@gmail.com"}
 ]
 
+    
 export function AboutMeSec() {
 
     const [mousePointer, setMousePointer] = useState({ x: 0, y: 0 });
@@ -35,15 +36,17 @@ export function AboutMeSec() {
     return (
         <div className="relative flex justify-center items-center w-full min-h-screen px-10 pt-16">
             <div className="absolute -rotate-90 left-75">
-                <h1 className="text-6xl font-bold overline">ABOUT ME</h1>
+                <h1 className="text-6xl font-bold overline">
+                    ABOUT ME
+                </h1>
             </div>
 
             {/* Spotlight */}
             <div className="absolute -top-200 left-1/2 -translate-x-1/2 w-300 h-300 bg-[#7226FF] rotate-40 blur-3xl opacity-40 rounded-full overflow-hidden "/>
             <div className="absolute -top-100 left-1/2 -translate-x-1/2 w-150 h-150 bg-[#A026FF] rotate-40 blur-3xl opacity-80 rounded-full overflow-hidden "/>
 
-             {/* Main card */}
-            <div className="relative w-full max-w-4xl overflow-hidden shadow-2xl bg-foreground m-20">
+            {/* Main card */}
+            <div className="relative w-full max-w-4xl overflow-hidden bg-foreground m-20">
                 <div className="grid gap-2 p-4 bg-background"
                     style={{
                         gridTemplateColumns: "1fr 1fr 0.8fr",
