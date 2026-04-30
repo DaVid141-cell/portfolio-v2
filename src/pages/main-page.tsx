@@ -1,9 +1,7 @@
 import { MainLayout } from "../components/layouts/main-layout"
-import { GridBox } from "../components/ui/grid-boxes"
-import { HeroImageHover } from "../components/ui/hero-image-hover"
-import { SocialIconFrame } from "../components/ui/social-icon-frame"
 import AboutPage from "./about"
 import { HeroSection } from "./hero-section"
+import ProjectPage from "./projects"
 
 export default function MainPage() {
     return (
@@ -16,6 +14,10 @@ export default function MainPage() {
 
             <section id="about">
                 <AboutPage/>
+            </section>
+
+            <section id="projects">
+                <ProjectPage/>
             </section>
         </MainLayout>
     )
