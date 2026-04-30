@@ -1,3 +1,5 @@
+import {  useInView, motion, useAnimation, useScroll, useTransform } from "framer-motion"
+import { useEffect, useRef } from "react"
 
 const languages = [
     {img: "/src/assets/images/html5.svg", text: "HTML", alt: "html"},
@@ -64,10 +66,51 @@ function SkillCard({title, data}: SkillCardProps) {
 }
 
 
+
+
 export function SkillSec () {
+    const containerRef = useRef(null)
+
+    const isInView = useInView(containerRef, {once: true})
+    const mainControls = useAnimation()
+
+    const { scrollYProgress } = useScroll({
+        target: containerRef,
+        offset: ["start 80%", "end 20%"]
+    })
+
+    const skillOneBox = useTransform(
+        scrollYProgress,
+        [0, 1],
+        ["-100", "0%"]
+    )
+
+    const skillTwoBox = useTransform(
+        scrollYProgress,
+        [0, 1],
+        ["100%", "0%"]
+    )
+
+    const skillThreeBox = useTransform(
+        scrollYProgress,
+        [0, 1],
+        ["100%", "0%"]
+    )
+    const skillOpacity = useTransform(
+        scrollYProgress,
+        [0, 0.5, 1],
+        [0, 0.5, 1]
+    )
+
+    useEffect (() => {
+        if (isInView) {
+            mainControls.start("visible")
+        }
+    }, [isInView])
+
     return (
         <div className="">
-           <div>
+           
              {/*left spot light */}
             <div className="w-190 h-30 relative top-20 right-60 bg-[#7226FF] rounded-r-full blur-3xl opacity-60  rotate-40 overflow-hidden -z-1"/>
             <div className="bg-[#A026FF] relative w-120 h-15 top-0 right-22 rounded-r-4xl rotate-40 blur-xl -z-1 opacity-90"/>
@@ -76,23 +119,46 @@ export function SkillSec () {
 
             <div className="w-190 h-30 relative bottom-25 left-350 bg-[#7226FF] rounded-r-full blur-3xl opacity-60  rotate-140 overflow-hidden -z-1"/>
             <div className="bg-[#A026FF] relative w-120 h-15 bottom-50 left-387 rounded-r-4xl rotate-140 blur-xl -z-1 opacity-90"/>
-           </div>
+           
 
-            <div className="flex justify-center relative bottom-50 ">
-                <h1 className="text-4xl font-bold">SKILLS</h1>
+            <div className="flex justify-center relative bottom-50 " ref={containerRef} >
+                <motion.h1 
+                    className="text-4xl font-bold"
+                    animate={mainControls}
+                    initial="hidden"
+                    variants={{
+                        hidden: { opacity: 0, y: 75},
+                        visible: {
+                            opacity: 1,
+                            y: 0,
+                        },
+                    }}
+                    transition={{ delay: 0.3}}
+                >
+                    SKILLS
+                </motion.h1>
             </div>
 
             {/* Grid Boxes */}
            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mx-24">
+                <motion.div style={{x: skillOneBox, opacity: skillOpacity}} >
+                    <SkillCard title="Languages" data={languages} />
+                </motion.div>
+                
+                <motion.div style={{x: skillTwoBox, opacity: skillOpacity}}>
+                    <SkillCard title="Frameworks" data={frameworks} />
+                </motion.div>
+                
 
-                <SkillCard title="Languages" data={languages} />
-                <SkillCard title="Frameworks" data={frameworks} />
-
-                <div className="md:col-span-2 flex justify-center">
+                <motion.div 
+                    className="md:col-span-2 flex justify-center"
+                    style={{y: skillThreeBox, opacity: skillOpacity}}
+                    
+                >
                     <div className="w-full md:w-1/2">
                         <SkillCard title="Tools" data={tools} />
                     </div>
-                </div>
+                </motion.div>
 
             </div>
         </div>
