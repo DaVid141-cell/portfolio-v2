@@ -110,8 +110,8 @@ export function SkillSec () {
 
     return (
         <div className="">
-           
-             {/*left spot light */}
+            
+            {/*left spot light */}
             <div className="w-190 h-30 relative top-20 right-60 bg-[#7226FF] rounded-r-full blur-3xl opacity-60  rotate-40 overflow-hidden -z-1"/>
             <div className="bg-[#A026FF] relative w-120 h-15 top-0 right-22 rounded-r-4xl rotate-40 blur-xl -z-1 opacity-90"/>
 
@@ -119,11 +119,12 @@ export function SkillSec () {
 
             <div className="w-190 h-30 relative bottom-25 left-350 bg-[#7226FF] rounded-r-full blur-3xl opacity-60  rotate-140 overflow-hidden -z-1"/>
             <div className="bg-[#A026FF] relative w-120 h-15 bottom-50 left-387 rounded-r-4xl rotate-140 blur-xl -z-1 opacity-90"/>
-           
-
-            <div className="flex justify-center relative bottom-50 " ref={containerRef} >
+            
+            
+            <div className="flex flex-col place-items-center m-10 py-12 px-4 gap-6" ref={containerRef} >
+                <div  className="relative w-28 top-5 h-1 bg-[#A026FF] blur-sm"/>
                 <motion.h1 
-                    className="text-4xl font-bold"
+                    className="text-4xl font-bold border-t-4"
                     animate={mainControls}
                     initial="hidden"
                     variants={{
@@ -137,8 +138,10 @@ export function SkillSec () {
                 >
                     SKILLS
                 </motion.h1>
+                
             </div>
 
+            
             {/* Grid Boxes */}
            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mx-24">
                 <motion.div style={{x: skillOneBox, opacity: skillOpacity}} >
