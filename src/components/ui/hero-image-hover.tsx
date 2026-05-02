@@ -5,7 +5,7 @@ export function HeroImageHover () {
         <div>
             {/* Anime image */}
                 <img
-                    src="/src/assets/me-anime.webp"
+                    src="/public/images/me-anime.webp"
                     alt="David Justin"
                     loading="lazy"
                     className="w-full select-none"

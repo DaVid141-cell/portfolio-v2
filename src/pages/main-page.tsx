@@ -43,7 +43,7 @@ export default function MainPage() {
                     <div className="mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
                         <div className="text-sm">
                             <a href="/">
-                                <img className="w-10" src="/src/assets/claudecode.png"/>
+                                <img className="w-10" src="/public/images/claudecode.png"/>
                             </a>
                             <p>© 2026 David Serad. All rights reserved</p>
                         </div>

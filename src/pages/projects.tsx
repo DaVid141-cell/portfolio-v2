@@ -14,7 +14,7 @@ const Projects: project[] = [
     {
         title: "Budo Training Program",
         description: "An immersive martial arts website built from the ground up using pure HTML, CSS, and JavaScript — exploring the fundamentals of UI/UX design through real-world application.",
-        image: "/src/assets/images/budo.png",
+        image: "/public/images/budo.png",
         tags: ["HTML", "CSS", "JavaScript"],
         liveURL: null,
         githubURL: "https://github.com/DaVid141-cell/Web-development",
@@ -22,7 +22,7 @@ const Projects: project[] = [
     {
         title: "Enomy Finance",
         description: "Enomy-Finances system is a web-based financial platform designed to support both staff and clients by providing secure, user-friendly tools for financial planning, savings, investments, and currency exchange.",
-        image: "/src/assets/images/enomy-finance.png",
+        image: "/public/images/enomy-finance.png",
         tags: ["Java", "HTML", "CSS", "JavaScript", "MySQL", "SpringBoot", "SpringMVC"],
         liveURL: null,
         githubURL: "https://github.com/DaVid141-cell/JavaSpringWeb",
@@ -30,7 +30,7 @@ const Projects: project[] = [
     {
         title: "Meals on Wheels",
         description: "Meals on Wheels is a charity-based food delivery platform for adults that are unable to cook, offering location-based menus serving HOT or COLD meals based on a 10 meter distance, rider-assigned deliveries, donor support via PayPal, and full admin oversight.",
-        image: "/src/assets/images/meals-on-wheels.png",
+        image: "/public/images/meals-on-wheels.png",
         tags: ["Laravel", "PHP", "React", "TypeScript", "MySQL"],
         liveURL: null,
         githubURL: "https://github.com/DaVid141-cell/meals-on-wheels",
@@ -38,7 +38,7 @@ const Projects: project[] = [
     {
         title: "AI Product Description Generator",
         description: "Using the Google Gemini API with a Flask backend and React+Vite frontend to auto-generate SEO-friendly product descriptions, improving efficiency, consistency, and customer engagement across stores and online.",
-        image: "/src/assets/images/jumpstart-fashion.png",
+        image: "/public/images/jumpstart-fashion.png",
         tags: ["React", "Python", "Flask", "Geminai API", "Rest API"],
         liveURL: null,
         githubURL: "https://github.com/DaVid141-cell/ai-product-description",
@@ -46,7 +46,7 @@ const Projects: project[] = [
     {
         title: "Hand Gesture Tracker",
         description: "A real-time hand gesture recognition system that uses a webcam, computer vision, and machine learning to detect and classify hand gestures. Built with MediaPipe for hand landmark detection and a KNN classifier for gesture prediction, the system features a full end-to-end pipeline from custom data collection to model training and live recognition demonstrating practical human-computer interaction through gesture control.",
-        image: "/src/assets/images/gesture-recognition.png",
+        image: "/public/images/gesture-recognition.png",
         tags: ["Python", "OpenCV", "MediaPipe", "Scikit-learn", "Pandas"],
         liveURL: null,
         githubURL: "https://github.com/DaVid141-cell/Computer-vision_Hand_Gesture-system",
@@ -54,7 +54,7 @@ const Projects: project[] = [
     {
         title: "Truth-Table Calculator",
         description: "A full-stack web application that allows users to input and evaluate propositional logic formulas through an interactive interface. The system handles logical expressions using operators such as AND, OR, NOT, and IMPLIES, making it a practical tool for discrete mathematics, logic education, and formal reasoning tasks.",
-        image: "/src/assets/images/truth-table.png",
+        image: "/public/images/truth-table.png",
         tags: ["Python", "Fast API", "React", "TypeScript", "Vercel"],
         liveURL: "https://truthtable-analyzer.vercel.app/",
         githubURL: "https://github.com/DaVid141-cell/propositional-logic-system",

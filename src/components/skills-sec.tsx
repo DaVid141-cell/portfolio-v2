@@ -2,34 +2,34 @@ import {  useInView, motion, useAnimation, useScroll, useTransform } from "frame
 import { useEffect, useRef } from "react"
 
 const languages = [
-    {img: "/src/assets/images/html5.svg", text: "HTML", alt: "html"},
-    {img: "/src/assets/images/css3-original.svg", text: "CSS", alt: "css" },
-    {img: "/src/assets/images/javascript.svg", text: "JavaScript", alt: "javascript"},
-    {img: "/src/assets/images/python.svg", text: "Python", alt: "python"},
-    {img: "/src/assets/images/java.svg", text: "Java", alt: "java"},
-    {img: "/src/assets/images/mysql.svg", text: "MySQL", alt: "mysql"},
-    {img: "/src/assets/images/typescript.svg", text: "TypeScript", alt: "typescript"},
+    {img: "/public/images/html5.svg", text: "HTML", alt: "html"},
+    {img: "/public/images/css3-original.svg", text: "CSS", alt: "css" },
+    {img: "/public/images/javascript.svg", text: "JavaScript", alt: "javascript"},
+    {img: "/public/images/python.svg", text: "Python", alt: "python"},
+    {img: "/public/images/java.svg", text: "Java", alt: "java"},
+    {img: "/public/images/mysql.svg", text: "MySQL", alt: "mysql"},
+    {img: "/public/images/typescript.svg", text: "TypeScript", alt: "typescript"},
 ]
 
 const frameworks = [
-    {img: "/src/assets/images/react.svg", text: "React", alt: "react"},
-    {img: "/src/assets/images/vite.svg", text: "Vite", alt: "vite"},
-    {img: "/src/assets/images/laravel.svg", text: "Laravel", alt: "laravel"},
-    {img: "/src/assets/images/tailwindcss.svg", text: "TailwindCSS", alt: "tailwindcss"},
-    {img: "/src/assets/images/spring-boot.svg", text: "SpringBoot", alt: "springboot"},
-    {img: "/src/assets/images/flask.svg", text: "Flask", alt: "flask"},
-    {img: "/src/assets/images/opencv.svg", text: "OpenCV", alt: "opencv"},
-    {img: "/src/assets/images/mediapipe.png", text: "MediaPipe", alt: "mediapipe"},
+    {img: "/public/images/react.svg", text: "React", alt: "react"},
+    {img: "/public/images/vite.svg", text: "Vite", alt: "vite"},
+    {img: "/public/images/laravel.svg", text: "Laravel", alt: "laravel"},
+    {img: "/public/images/tailwindcss.svg", text: "TailwindCSS", alt: "tailwindcss"},
+    {img: "/public/images/spring-boot.svg", text: "SpringBoot", alt: "springboot"},
+    {img: "/public/images/flask.svg", text: "Flask", alt: "flask"},
+    {img: "/public/images/opencv.svg", text: "OpenCV", alt: "opencv"},
+    {img: "/public/images/mediapipe.png", text: "MediaPipe", alt: "mediapipe"},
 ]
 
 const tools = [
-    {img: "/src/assets/images/git.svg", text: "Git", alt: "git"},
-    {img: "/src/assets/images/github.svg", text: "GitHub", alt: "github"},
-    {img: "/src/assets/images/shadcn.svg", text: "Shadcn", alt: "Shadcn"},
-    {img: "/src/assets/images/framer.svg", text: "Framer Motion", alt: "framerMotion"},
-    {img: "/src/assets/images/figma.svg", text: "Figma", alt: "figma"},
-    {img: "/src/assets/images/chatgpt.svg", text: "ChatGPT", alt: "chatgpt"},
-    {img: "/src/assets/images/claude.png", text: "ClaudeCode", alt: "claudecode"}
+    {img: "/public/images/git.svg", text: "Git", alt: "git"},
+    {img: "/public/images/github.svg", text: "GitHub", alt: "github"},
+    {img: "/public/images/shadcn.svg", text: "Shadcn", alt: "Shadcn"},
+    {img: "/public/images/framer.svg", text: "Framer Motion", alt: "framerMotion"},
+    {img: "/public/images/figma.svg", text: "Figma", alt: "figma"},
+    {img: "/public/images/chatgpt.svg", text: "ChatGPT", alt: "chatgpt"},
+    {img: "/public/images/claude.png", text: "ClaudeCode", alt: "claudecode"}
 ]
 
 type SkillItem = {
