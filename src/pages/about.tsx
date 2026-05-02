@@ -7,7 +7,14 @@ export default function AboutPage () {
     return (
         <div className="w-full">
             {/*About me content */}
-            <div className="w-full min-h-screen relative bg-[#111111] z-1">
+            <div className="w-full min-h-screen relative bg-[#111111] z-1 ">
+
+                <div className="relative left-4 top-1/2 translate-x-70 translate-y-150 w-fit">
+                    <div  className="relative w-75 bottom-5 right-10 top-8 h-1 bg-[#A026FF] blur-sm -rotate-90 "/>
+                    <h1 className="text-6xl font-bold overline -rotate-90 shrink-0 w-fit z-10">
+                        ABOUT ME
+                    </h1>
+                </div>
                 <AboutMeSec/>
             </div>
 
@@ -23,7 +30,8 @@ export default function AboutPage () {
                 </div>
 
                 <div className="pt-55 pl-30">
-                    <h1 className="text-5xl font-bold">
+                    <div  className="relative w-65 left-3 h-1 bg-[#A026FF] blur-sm"/>
+                    <h1 className="text-5xl font-bold border-t-4 w-fit">
                         EDUCATION
                     </h1>
                     <div className="w-full max-w-fit">
