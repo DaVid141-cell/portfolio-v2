@@ -156,7 +156,7 @@
 
 .mask {
   position: absolute;
-  mask-image: url('/public/images/mask.webp');
+  mask-image: url('/images/mask.webp');
   background: rgb(155, 150, 150);
   mask-repeat: no-repeat;
   mask-size: 50px;

@@ -26,7 +26,7 @@ export default function AboutPage () {
             
 
                 <div className="w-110 absolute left-260 top-104 select-none z-1 overflow-hidden opacity-80">
-                    <img src="/public/images/about-img.webp" alt="about-img" loading="lazy"/>
+                    <img src="/images/about-img.webp" alt="about-img" loading="lazy"/>
                 </div>
 
                 <div className="pt-55 pl-30">

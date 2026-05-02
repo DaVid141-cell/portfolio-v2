@@ -59,7 +59,7 @@ export function AboutMeSec() {
                                 style={{ width: "33%" }}
                             >
                                 {/* Image here */}
-                                <img className="w-60 flex relative bottom-15" src="/public/images/fixed-me.webp"/>
+                                <img className="w-60 flex relative bottom-15" src="/images/fixed-me.webp"/>
                             </div>
 
                             {/* Right — normal text */}
@@ -77,7 +77,7 @@ export function AboutMeSec() {
                             }}
                             transition={{ ease: "backOut", duration: 0.4 }}
                             style={{
-                                WebkitMaskImage: "url('/public/images/mask.webp')",
+                                WebkitMaskImage: "url('/images/mask.webp')",
                                 WebkitMaskRepeat: "no-repeat",
                             }}
                         >
@@ -89,7 +89,7 @@ export function AboutMeSec() {
                                 onMouseLeave={() => setIsHovered(false)}
                             >
                                 {/* Different image or color revealed here */}
-                                <img className="w-55 flex relative bottom-5 right-5" src="/public/images/manga-aizen.webp"/>
+                                <img className="w-55 flex relative bottom-5 right-5" src="/images/manga-aizen.webp"/>
                             </div>
 
                             {/* Right — revealed text */}
