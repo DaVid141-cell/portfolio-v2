@@ -8,7 +8,7 @@ import { faFacebook, faGithub, faLinkedin } from "@fortawesome/free-brands-svg-i
 
 const SocialLinks = [
     { icon: faGithub, href: "https://github.com/DaVid141-cell" },
-    { icon: faLinkedin, href: "https://www.linkedin.com/in/david-justin-2092ba37a/" },
+    { icon: faLinkedin, href: "https://www.linkedin.com/in/david-justin-serad-2092ba37a/" },
     { icon: faFacebook, href: "https://www.facebook.com/seraddavidjustin" }
 ]
 
