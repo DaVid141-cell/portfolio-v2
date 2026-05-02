@@ -1,6 +1,6 @@
 import { Code, Heart, Lightbulb, Users } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
-import { motion, useAnimation, useInView } from "framer-motion"
+import { motion } from "framer-motion"
 
 const info = [
     { label: "Age", value: "20" },
