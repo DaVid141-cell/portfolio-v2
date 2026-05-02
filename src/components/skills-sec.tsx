@@ -2,34 +2,34 @@ import {  useInView, motion, useAnimation, useScroll, useTransform } from "frame
 import { useEffect, useRef } from "react"
 
 const languages = [
-    {img: "/public/images/html5.svg", text: "HTML", alt: "html"},
-    {img: "/public/images/css3-original.svg", text: "CSS", alt: "css" },
-    {img: "/public/images/javascript.svg", text: "JavaScript", alt: "javascript"},
-    {img: "/public/images/python.svg", text: "Python", alt: "python"},
-    {img: "/public/images/java.svg", text: "Java", alt: "java"},
-    {img: "/public/images/mysql.svg", text: "MySQL", alt: "mysql"},
-    {img: "/public/images/typescript.svg", text: "TypeScript", alt: "typescript"},
+    {img: "/images/html5.svg", text: "HTML", alt: "html"},
+    {img: "/images/css3-original.svg", text: "CSS", alt: "css" },
+    {img: "/images/javascript.svg", text: "JavaScript", alt: "javascript"},
+    {img: "/images/python.svg", text: "Python", alt: "python"},
+    {img: "/images/java.svg", text: "Java", alt: "java"},
+    {img: "/images/mysql.svg", text: "MySQL", alt: "mysql"},
+    {img: "/images/typescript.svg", text: "TypeScript", alt: "typescript"},
 ]
 
 const frameworks = [
-    {img: "/public/images/react.svg", text: "React", alt: "react"},
-    {img: "/public/images/vite.svg", text: "Vite", alt: "vite"},
-    {img: "/public/images/laravel.svg", text: "Laravel", alt: "laravel"},
-    {img: "/public/images/tailwindcss.svg", text: "TailwindCSS", alt: "tailwindcss"},
-    {img: "/public/images/spring-boot.svg", text: "SpringBoot", alt: "springboot"},
-    {img: "/public/images/flask.svg", text: "Flask", alt: "flask"},
-    {img: "/public/images/opencv.svg", text: "OpenCV", alt: "opencv"},
-    {img: "/public/images/mediapipe.png", text: "MediaPipe", alt: "mediapipe"},
+    {img: "/images/react.svg", text: "React", alt: "react"},
+    {img: "/images/vite.svg", text: "Vite", alt: "vite"},
+    {img: "/images/laravel.svg", text: "Laravel", alt: "laravel"},
+    {img: "/images/tailwindcss.svg", text: "TailwindCSS", alt: "tailwindcss"},
+    {img: "/images/spring-boot.svg", text: "SpringBoot", alt: "springboot"},
+    {img: "/images/flask.svg", text: "Flask", alt: "flask"},
+    {img: "/images/opencv.svg", text: "OpenCV", alt: "opencv"},
+    {img: "/images/mediapipe.png", text: "MediaPipe", alt: "mediapipe"},
 ]
 
 const tools = [
-    {img: "/public/images/git.svg", text: "Git", alt: "git"},
-    {img: "/public/images/github.svg", text: "GitHub", alt: "github"},
-    {img: "/public/images/shadcn.svg", text: "Shadcn", alt: "Shadcn"},
-    {img: "/public/images/framer.svg", text: "Framer Motion", alt: "framerMotion"},
-    {img: "/public/images/figma.svg", text: "Figma", alt: "figma"},
-    {img: "/public/images/chatgpt.svg", text: "ChatGPT", alt: "chatgpt"},
-    {img: "/public/images/claude.png", text: "ClaudeCode", alt: "claudecode"}
+    {img: "/images/git.svg", text: "Git", alt: "git"},
+    {img: "/images/github.svg", text: "GitHub", alt: "github"},
+    {img: "/images/shadcn.svg", text: "Shadcn", alt: "Shadcn"},
+    {img: "/images/framer.svg", text: "Framer Motion", alt: "framerMotion"},
+    {img: "/images/figma.svg", text: "Figma", alt: "figma"},
+    {img: "/images/chatgpt.svg", text: "ChatGPT", alt: "chatgpt"},
+    {img: "/images/claude.png", text: "ClaudeCode", alt: "claudecode"}
 ]
 
 type SkillItem = {
