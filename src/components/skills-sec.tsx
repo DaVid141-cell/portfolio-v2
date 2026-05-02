@@ -109,19 +109,22 @@ export function SkillSec () {
     }, [isInView])
 
     return (
-        <div className="">
+        <div className="relative overflow-hidden">
             
-            {/*left spot light */}
-            <div className="w-190 h-30 relative top-20 right-60 bg-[#7226FF] rounded-r-full blur-3xl opacity-60  rotate-40 overflow-hidden -z-1"/>
-            <div className="bg-[#A026FF] relative w-120 h-15 top-0 right-22 rounded-r-4xl rotate-40 blur-xl -z-1 opacity-90"/>
+            {/* Left spotlight */}
+            <div className="absolute top-0 left-0 pointer-events-none -translate-x-1/4 -translate-y-1/4">
+                <div className="w-190 h-30 bg-[#7226FF] rounded-r-full blur-3xl opacity-60 rotate-40 -translate-x-1/4 translate-y-10"/>
+                <div className="w-120 h-15 bg-[#A026FF] rounded-r-4xl rotate-40 blur-xl opacity-90"/>
+            </div>
 
-            {/*right spot light */}
-
-            <div className="w-190 h-30 relative bottom-25 left-350 bg-[#7226FF] rounded-r-full blur-3xl opacity-60  rotate-140 overflow-hidden -z-1"/>
-            <div className="bg-[#A026FF] relative w-120 h-15 bottom-50 left-387 rounded-r-4xl rotate-140 blur-xl -z-1 opacity-90"/>
+            {/* Right spotlight */}
+            <div className="absolute top-0 right-0 pointer-events-none translate-x-100 -translate-y-1/4">
+                <div className="w-190 h-30 bg-[#7226FF] rounded-r-full blur-3xl opacity-60 -rotate-40 -translate-x-20  translate-y-10"/>
+                <div className="w-120 h-15 bg-[#A026FF] rounded-r-4xl -rotate-40 blur-xl opacity-90"/>
+            </div>
             
             
-            <div className="flex flex-col place-items-center m-10 py-12 px-4 gap-6" ref={containerRef} >
+            <div className="flex flex-col place-items-center pt-28 py-12 px-4 gap-6" ref={containerRef} >
                 <div  className="relative w-28 top-5 h-1 bg-[#A026FF] blur-sm"/>
                 <motion.h1 
                     className="text-4xl font-bold border-t-4"
@@ -134,7 +137,7 @@ export function SkillSec () {
                             y: 0,
                         },
                     }}
-                    transition={{ delay: 0.3}}
+                    transition={{ delay: 0.5}}
                 >
                     SKILLS
                 </motion.h1>
