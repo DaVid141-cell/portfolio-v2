@@ -46,7 +46,7 @@ const Projects: project[] = [
     {
         title: "Hand Gesture Tracker",
         description: "A real-time hand gesture recognition system that uses a webcam, computer vision, and machine learning to detect and classify hand gestures. Built with MediaPipe for hand landmark detection and a KNN classifier for gesture prediction, the system features a full end-to-end pipeline from custom data collection to model training and live recognition demonstrating practical human-computer interaction through gesture control.",
-        image: "/src/assets/images/",
+        image: "/src/assets/images/gesture-recognition.png",
         tags: ["Python", "OpenCV", "MediaPipe", "Scikit-learn", "Pandas"],
         liveURL: null,
         githubURL: "https://github.com/DaVid141-cell/Computer-vision_Hand_Gesture-system",
@@ -68,7 +68,16 @@ export default function ProjectPage () {
     
 
     return (
-        <div className="bg-[#111111] text-black">
+        <div className="bg-[#111111] text-black overflow-hidden relative">
+
+            {/* Top right spotlight */}
+            <div className="absolute top-0 right-0 pointer-events-none translate-x-1/4 -translate-y-1/4">
+                <div className="w-150 h-150 bg-[#7226FF] rounded-full blur-3xl opacity-50"/>
+            </div>
+            <div className="absolute top-10 right-10 pointer-events-none translate-x-1/4 -translate-y-1/4">
+                <div className="w-100 h-100 bg-[#A026FF] rounded-full blur-2xl opacity-60"/>
+            </div>
+
             <div className="flex flex-col  place-items-center m-10 py-12 px-4 gap-6">
                 <div  className="relative w-68 top-5 h-1 bg-[#A026FF] blur-sm"/>
                     <h1 className="text-6xl text-white font-bold border-t-4">PROJECT</h1>
@@ -78,25 +87,38 @@ export default function ProjectPage () {
                 style={{ gridTemplateColumns: "1fr 80px 1fr" }}
             >
                 {/* LEFT COLUMN */}
-                <div className="flex flex-col gap-24">
+                <div className="flex flex-col gap-24 z-1">
                     {leftProjects.map((project, i) => (
                         <ProjectCard key={i} {...project} />
                     ))}
                 </div>
+                
 
                 {/* CENTER DIVIDER */}
                 <div className="flex flex-col items-center top-0 h-screen py-24">
                     <ProjectDivider />
                 </div>
 
+
                 {/* RIGHT COLUMN */}
-                <div className="flex flex-col gap-24 mt-80">
+                <div className="flex flex-col gap-24 mt-80 z-1">
                     {rightProjects.map((project, i) => (
                         <ProjectCard key={i} {...project} />
                     ))}
                 </div>
 
+                
+                
             </div>
+            
+            {/* Bottom left spotlight */}
+            <div className="absolute bottom-0 left-0 pointer-events-none -translate-x-1/4 translate-y-1/4">
+                <div className="w-150 h-150 bg-[#7226FF] rounded-full blur-3xl opacity-50"/>
+            </div>
+            <div className="absolute bottom-10 left-10 pointer-events-none -translate-x-1/4 translate-y-1/4">
+                <div className="w-100 h-100 bg-[#A026FF] rounded-full blur-2xl opacity-60"/>
+            </div>
+            
         </div>
     )
 }
@@ -170,7 +192,7 @@ function ProjectCard ({title, description, image, tags, liveURL, githubURL } : p
                     
                         href={githubURL}
                         target="_blank"
-                        className="bg-accent-foreground hover:bg-[#3a3a3a] transition-colors text-white px-5 py-2 rounded-full text-sm font-medium cursor-pointer"
+                        className="bg-foreground hover:bg-[#3a3a3a] transition-colors text-white px-5 py-2 rounded-full text-sm font-medium cursor-pointer"
                     >
                         GitHub
                     </a>
