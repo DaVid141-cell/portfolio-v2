@@ -2,13 +2,12 @@ import { NavBar } from "../navbar";
 
 export function MainLayout ({children} : { children: React.ReactNode }) {
     return (
-        <div className="relative w-full min-h-screen">
+    
+        <div className="flex flex-col">
             {/* Navbar */}
-                <NavBar />
-            {/* Page content */}
-            <div className="">
-                {children}
-            </div>
+            <NavBar />
+            {/* rederding of content sections */}
+            {children}
         </div>
     )
 }
