@@ -53,7 +53,7 @@ function SkillCard({title, data}: SkillCardProps) {
                         
             <div className="grid grid-cols-1 sm:grid-cols-3">
                     {data.map((items, i) => (    
-                    <div key={i} className="flex flex-wrap sm:flex-row bg-foreground shadow-xl/60 items-center justify-center sm:text-left text-center rounded-lg m-6 p-4 gap-4 min-h-[100px]">
+                    <div key={i} className="flex flex-wrap sm:flex-row bg-foreground shadow-xl/60 items-center justify-center sm:text-left text-center rounded-lg m-6 p-4 gap-4 min-h-25">
                         <div>
                             <img className="w-8 sm:w-10 lg:w-12" src={items.img} alt={items.alt}/>
                         </div>
