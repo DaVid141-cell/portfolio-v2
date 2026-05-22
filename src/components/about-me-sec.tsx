@@ -34,37 +34,36 @@ export function AboutMeSec() {
     const containerRef = useRef<HTMLDivElement>(null);
 
     return (
-        <div className="relative flex justify-center items-center w-full min-h-screen px-10 pt-16">
+        <div className="relative flex justify-center items-center w-full min-h-screen overflow-hidden ">
             
 
             {/* Spotlight */}
-            <div className="absolute -top-200 left-1/2 -translate-x-1/2 w-300 h-300 bg-[#7226FF] rotate-40 blur-3xl opacity-40 rounded-full overflow-hidden "/>
-            <div className="absolute -top-100 left-1/2 -translate-x-1/2 w-150 h-150 bg-[#A026FF] rotate-40 blur-3xl opacity-80 rounded-full overflow-hidden "/>
+            <div className=" absolute inset-0 overflow-hidden pointer-events-none">
+                <div className="absolute top-[-40%] left-1/2 -translate-x-1/2 w-235 h-235 sm:w-185 sm:h-185 lg:w-225 lg:h-225 bg-[#7226FF] rotate-40 blur-3xl opacity-40 rounded-full overflow-hidden "/>
+                <div className="absolute top-[-15%] left-1/2 -translate-x-1/2 w-65.5 h-85.5 sm:w-82.5 sm:h-82.5 lg:w-150 lg:h-150 bg-[#A026FF] rotate-40 blur-3xl opacity-80 rounded-full overflow-hidden "/>
+            </div>
+            
 
             {/* Main card */}
-            <div className="relative w-full max-w-4xl overflow-hidden bg-foreground m-20">
-                <div className="grid gap-2 p-4 bg-background"
-                    style={{
-                        gridTemplateColumns: "1fr 1fr 0.8fr",
-                        gridTemplateRows: "auto auto auto auto",
-                    }}>
+            <div className="relative w-full max-w-4xl overflow-hidden bg-foreground mx-4 my-10 sm:mx-8 lg:m-20">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1fr_1fr_0.8fr] gap-2 p-4 bg-background">
 
                    {/* Row 1 — Image + Name with mask hover effect */}
-                    <div ref={containerRef} className="relative h-58 col-span-3 overflow-hidden flex">
+                    <div ref={containerRef} className="relative h-28 sm:h-42 lg:h-58 col-span-1 md:col-span-2 lg:col-span-3 overflow-hidden flex">
 
                         {/* Normal layer — always visible */}
                         <div className="flex w-full h-full">
                             {/* Left — image placeholder */}
-                            <div className="bg-background h-full manga-box-1 shadow-2xl border-2"
-                                style={{ width: "33%" }}
+                            <div className="w-32 sm:w-44 lg:w-60 bg-background h-full manga-box-1 shadow-2xl border-2"
+                               
                             >
                                 {/* Image here */}
-                                <img className="w-60 flex relative bottom-15" src="/images/fixed-me.webp"/>
+                                <img className=" w-32 sm:w-44 lg:w-60 flex relative bottom-10 lg:bottom-15" src="/images/fixed-me.webp"/>
                             </div>
 
                             {/* Right — normal text */}
                             <div className="bg-[#1a1a1a] flex-1 flex items-center justify-center px-10 manga-box-2">
-                                <h1 className="text-white text-6xl font-black tracking-tight">I'M DAVID</h1>
+                                <h1 className="text-white text-2xl sm:text-4xl lg:text-6xl font-black tracking-tight">I'M DAVID</h1>
                             </div>
                         </div>
 
@@ -83,13 +82,12 @@ export function AboutMeSec() {
                         >
                             {/* Left — revealed image */}
                             <div
-                                className="bg-background h-full flex items-center justify-center manga-box-1"
-                                style={{ width: "33%" }}
+                                className="bg-background h-full flex items-center justify-center manga-box-1 w-[35%] sm:w-[30%] lg:w-[33%]"
                                 onMouseEnter={() => setIsHovered(true)}
                                 onMouseLeave={() => setIsHovered(false)}
                             >
                                 {/* Different image or color revealed here */}
-                                <img className="w-55 flex relative bottom-5 right-5" src="/images/manga-aizen.webp"/>
+                                <img className="w-28 sm:w-40 lg:w-55 flex relative bottom-5 right-5 lg:bottom-5 lg:right-5 " src="/images/manga-aizen.webp"/>
                             </div>
 
                             {/* Right — revealed text */}
@@ -98,7 +96,7 @@ export function AboutMeSec() {
                                 onMouseEnter={() => setIsHovered(true)}
                                 onMouseLeave={() => setIsHovered(false)}
                             >
-                                <h1 className="text-white text-6xl font-black tracking-tight cursor-default ml-10">
+                                <h1 className="text-white text-xl sm:text-3xl lg:text-6xl font-black tracking-tight cursor-default ml-2 sm:ml-4 lg:ml-10 text-center">
                                     I'M FULL STACK DEVELOPER
                                 </h1>
                             </div>
@@ -125,7 +123,7 @@ export function AboutMeSec() {
                     </div>
 
                     {/* Info panel — right column spans rows 2 & 3 */}
-                    <div className=" p-6 row-span-2 flex flex-col justify-center gap-4 border-2 shadow-lg">
+                    <div className=" p-6 lg:row-span-2 flex flex-col justify-center gap-4 border-2 shadow-lg">
                         {info.map((item, i) => (
                             <div key={i} className="border-b border-black/10 pb-3 last:border-0">
                                 <p className="text-xs text-black font-bold uppercase tracking-widest mb-1">{item.label}</p>
@@ -153,7 +151,7 @@ export function AboutMeSec() {
                     </div>
 
                     {/* Row 4 */}
-                    <div className=" col-span-3 p-8 border-2 shadow-lg">
+                    <div className="col-span-1 md:col-span-2 lg:col-span-3 p-8 border-2 shadow-lg">
                         <p className="text-black leading-relaxed text-sm max-w-3xl">
                             I'm a Software Engineering student specializing in building fast, scalable, and SEO-friendly 
                             web applications. I turn complex ideas into clean, functional digital solutions using modern 
