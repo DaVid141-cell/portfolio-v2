@@ -54,9 +54,9 @@ export default function ContactPage () {
 
 
     return (
-        <div className="my-16 flex flex-row justify-between flex-wrap gap-12 max-w-6xl mx-auto">
+        <div className="my-16 flex flex-row flex-wrap gap-30 max-w-6xl mx-auto justify-center">
             
-            <div className="flex flex-col justify-center">
+            <div className="flex flex-col justify-center px-10">
                 <h1 className="text-3xl text-white font-bold mb-4">Let's work together</h1>
                 <span className="text-sm text-grey-200 mb-4">My inbox is always open, whether you have a question or just want to say hi.</span>
                 <p className="text-sm text-grey-200 mb-4">I'll try my best to get back to you!</p>
@@ -69,7 +69,7 @@ export default function ContactPage () {
                 </div>
             </div>
 
-            <div className="w-110">
+            <div className=" w-110 px-10">
                 <Card className="bg-foreground shadow-xl/60 w-full p-8">
                     <CardContent>
                         <form onSubmit={handleSubmit}>
@@ -136,8 +136,8 @@ export default function ContactPage () {
                         </form>
                     </CardContent>
                 </Card>
-                <div className="relative bottom-10 right-8 w-18 h-18 bg-[#A026FF] rounded-full blur-2xl"/>
-                <div className="relative bottom-120 left-100 w-18 h-18 bg-[#7226FF] rounded-full blur-2xl"/>
+                <div className="relative -translate-y-10 -translate-x-5 w-18 h-18 bg-[#A026FF] rounded-full blur-2xl"/>
+                <div className="relative -translate-y-120 translate-x-60 lg:translate-x-80 w-18 h-18 bg-[#7226FF] rounded-full blur-2xl overflow-hidden"/>
             </div>
         </div>
 
