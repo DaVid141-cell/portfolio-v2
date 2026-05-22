@@ -1,31 +1,58 @@
-import { useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 
 export function GridBox () {
     const glowCursor = useRef<HTMLDivElement>(null)
+    
 
-    const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-        const rectangle = e.currentTarget.getBoundingClientRect();
-        const x = e.clientX - rectangle.left;
-        const y = e.clientY - rectangle.top;
-        if (glowCursor.current) {
-            glowCursor.current.style.left = `${x}px`
-            glowCursor.current.style.top = `${y}px`
+    const [gridSize, setGridSize] = useState({
+        cols: 8,
+        rows: 5,
+    })
+    useEffect (() => {
+        const updateGrid = () => {
+            if (window.innerWidth < 640) {
+                setGridSize({cols: 4, rows: 7})
+            } else if (window.innerWidth < 1024) {
+                setGridSize({cols: 6, rows: 6})
+            } else {
+                setGridSize({cols: 8, rows: 5})
+            }
+        }
+        updateGrid()
+        window.addEventListener("resize", updateGrid)
+
+        return () => window.removeEventListener("resize", updateGrid)
+    }, [])
+
+    useEffect (() => {
+        const moveGlow = (e: MouseEvent) => {
+            if (!glowCursor.current)
+                return
+            glowCursor.current.style.left = `${e.clientX}px`
+            glowCursor.current.style.top = `${e.clientY}px`
             glowCursor.current.style.opacity = "1"
-        } 
-    }
+        }
 
-    const handleMouseLeave = () => {
-        if (glowCursor.current) glowCursor.current.style.opacity = "0"
-    }
+        const hideGlow = () => {
+            if (!glowCursor.current)
+                return
+            glowCursor.current.style.opacity = "0"
+        }
 
-    const cols = 8
-    const rows = 5
+        window.addEventListener("mousemove", moveGlow)
+        window.addEventListener("mouseleave", hideGlow)
+
+        return () => {
+            window.removeEventListener("mousemove", moveGlow)
+            window.removeEventListener("mouseleave", hideGlow)
+        }
+    }, [])
+
+    const {cols, rows} = gridSize
 
     return (
         <div
             className="absolute inset-0 z-0 overflow-hidden bg-foreground "
-            onMouseMove={handleMouseMove}
-            onMouseLeave={handleMouseLeave}
         >
             {/* Glow layer */}
             <div
@@ -48,7 +75,7 @@ export function GridBox () {
                     zIndex: 1,
                     gridTemplateColumns: `repeat(${cols}, 1fr)`,
                     gridTemplateRows: `repeat(${rows}, 1fr)`,
-                    gap: "10px",
+                    gap: window.innerWidth < 640 ? "6px" : "10px",
                 }}
             >
                 {Array.from({ length: cols * rows }).map((_, i) => {
