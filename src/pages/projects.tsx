@@ -72,19 +72,19 @@ export default function ProjectPage () {
 
             {/* Top right spotlight */}
             <div className="absolute top-0 right-0 pointer-events-none translate-x-1/4 -translate-y-1/4">
-                <div className="w-150 h-150 bg-[#7226FF] rounded-full blur-3xl opacity-50"/>
+                <div className="w-45 h-45 sm:w-75 sm:h-75 lg:w-150 lg:h-150 bg-[#7226FF] rounded-full blur-3xl opacity-50"/>
             </div>
             <div className="absolute top-10 right-10 pointer-events-none translate-x-1/4 -translate-y-1/4">
-                <div className="w-100 h-100 bg-[#A026FF] rounded-full blur-2xl opacity-60"/>
+                <div className="w-35 h-35 sm:w-50 sm:h-50 lg:w-100 lg:h-100 bg-[#A026FF] rounded-full blur-2xl opacity-60"/>
             </div>
 
-            <div className="flex flex-col  place-items-center m-10 py-12 px-4 gap-6">
-                <div  className="relative w-68 top-5 h-1 bg-[#A026FF] blur-sm"/>
-                    <h1 className="text-6xl text-white font-bold border-t-4">PROJECT</h1>
+            <div className="flex flex-col  place-items-center mt-10 pt-20 pb-12 px-4 gap-6">
+                <div  className="relative w-28 sm:w-44 lg:w-68 top-5 h-1 bg-[#A026FF] blur-sm"/>
+                    <h1 className="text-2xl sm:text-4xl lg:text-6xl text-white font-bold border-t-4">PROJECT</h1>
             </div>
             
-            <div className="grid gap-12 p-24 justify-items-center"
-                style={{ gridTemplateColumns: "1fr 80px 1fr" }}
+            <div className="grid grid-cols-1 lg:grid-cols-[1fr_80px_1fr] gap-12 px-4 sm:px-8 lg:px-16 xl:px-24 py-12 justify-items-center "
+                
             >
                 {/* LEFT COLUMN */}
                 <div className="flex flex-col gap-24 z-1">
@@ -95,13 +95,13 @@ export default function ProjectPage () {
                 
 
                 {/* CENTER DIVIDER */}
-                <div className="flex flex-col items-center top-0 h-screen py-24">
+                <div className="hidden lg:flex flex-col items-center top-0 h-screen py-24">
                     <ProjectDivider />
                 </div>
 
 
                 {/* RIGHT COLUMN */}
-                <div className="flex flex-col gap-24 mt-80 z-1">
+                <div className="flex flex-col gap-24 lg:mt-80 z-1">
                     {rightProjects.map((project, i) => (
                         <ProjectCard key={i} {...project} />
                     ))}
@@ -113,10 +113,10 @@ export default function ProjectPage () {
             
             {/* Bottom left spotlight */}
             <div className="absolute bottom-0 left-0 pointer-events-none -translate-x-1/4 translate-y-1/4">
-                <div className="w-150 h-150 bg-[#7226FF] rounded-full blur-3xl opacity-50"/>
+                <div className="w-45 h-45 sm:w-75 sm:h-75 lg:w-150 lg:h-150 bg-[#7226FF] rounded-full blur-3xl opacity-50"/>
             </div>
             <div className="absolute bottom-10 left-10 pointer-events-none -translate-x-1/4 translate-y-1/4">
-                <div className="w-100 h-100 bg-[#A026FF] rounded-full blur-2xl opacity-60"/>
+                <div className="w-35 h-35 sm:w-50 sm:h-50 lg:w-100 lg:h-100 bg-[#A026FF] rounded-full blur-2xl opacity-60"/>
             </div>
             
         </div>
@@ -128,7 +128,7 @@ function ProjectCard ({title, description, image, tags, liveURL, githubURL } : p
 
     return (
 
-        <div className="w-full max-w-150 flex flex-col rounded-2xl overflow-hidden bg-[#1a1a1a] relative shadow-lg">
+        <div className="w-full max-w-full sm:max-w-125 lg:max-w-150 flex flex-col rounded-2xl overflow-hidden bg-[#1a1a1a] relative shadow-lg">
 
             {/* Image at top */}
             <div className="w-full h-full overflow-hidden">
@@ -145,7 +145,7 @@ function ProjectCard ({title, description, image, tags, liveURL, githubURL } : p
                 {/* Title and description */}
                 <div>
                     <h1 className="font-bold text-2xl mb-1 text-white">{title}</h1>
-                    <p className="text-md text-gray-400 leading-relaxed">
+                    <p className="text-sm sm:text-base text-gray-400 leading-relaxed">
                        {description}
                     </p>
                 </div>
@@ -153,14 +153,14 @@ function ProjectCard ({title, description, image, tags, liveURL, githubURL } : p
                 {/* Tech stack tags */}
                 <div className="flex flex-wrap gap-3">
                     {tags.map((tag, i) => (
-                        <span key={i} className="bg-background text-black px-3 py-1 rounded-full text-sm">
+                        <span key={i} className="bg-background text-black px-3 py-1 rounded-full text-xs sm:text-sm">
                             {tag}
                         </span>
                     ))}
                 </div>
 
                 {/* Buttons */}
-                <div className="flex gap-3 mt-2 relative">
+                <div className="flex flex-wrap gap-3 mt-2 relative">
                     
                     {/* Live Demo button */}
                     {liveURL ? (
