@@ -21,11 +21,11 @@ export default function MainPage() {
                 <HeroSection/>
             </section>
 
-            <section id="about">
+            <section id="about" className="w-full">
                 <AboutPage/>
             </section>
 
-            <section id="projects">
+            <section id="projects" className="w-full">
                 <ProjectPage/>
             </section>
 
