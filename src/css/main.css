@@ -140,7 +140,6 @@
     }
   body {
     @apply bg-foreground text-background;
-    @apply overflow-x-hidden
     }
   html {
     @apply font-sans;
