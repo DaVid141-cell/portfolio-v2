@@ -48,14 +48,14 @@ function SkillCard({title, data}: SkillCardProps) {
     return (
         <div className="flex flex-col items-center">
             <div className="m-8">
-                <h1 className="text-xl font-bold">{title}</h1>
+                <h1 className="text-lg sm:text-xl lg:text-2xl font-bold">{title}</h1>
             </div>
                         
-            <div className="grid grid-cols-3 grid-rows-2 ">
+            <div className="grid grid-cols-1 sm:grid-cols-3">
                     {data.map((items, i) => (    
-                    <div key={i} className="flex flex-wrap bg-foreground shadow-xl/60 items-center justify-center rounded-lg m-6 p-4 gap-4">
+                    <div key={i} className="flex flex-wrap sm:flex-row bg-foreground shadow-xl/60 items-center justify-center sm:text-left text-center rounded-lg m-6 p-4 gap-4 min-h-[100px]">
                         <div>
-                            <img className="w-10" src={items.img} alt={items.alt}/>
+                            <img className="w-8 sm:w-10 lg:w-12" src={items.img} alt={items.alt}/>
                         </div>
                         <span>{items.text}</span>
                     </div>
@@ -82,7 +82,7 @@ export function SkillSec () {
     const skillOneBox = useTransform(
         scrollYProgress,
         [0, 1],
-        ["-100", "0%"]
+        ["-100%", "0%"]
     )
 
     const skillTwoBox = useTransform(
@@ -109,22 +109,22 @@ export function SkillSec () {
     }, [isInView])
 
     return (
-        <div className="relative overflow-hidden">
+        <div className="relative overflow-hidden isolate">
             
             {/* Left spotlight */}
             <div className="absolute top-0 left-0 pointer-events-none -translate-x-1/4 -translate-y-1/4">
-                <div className="w-190 h-30 bg-[#7226FF] rounded-r-full blur-3xl opacity-60 rotate-40 -translate-x-1/4 translate-y-10"/>
-                <div className="w-120 h-15 bg-[#A026FF] rounded-r-4xl rotate-40 blur-xl opacity-90"/>
+                <div className="w-62.5 h-20 sm:w-112.5 sm:h-25 lg:w-187.5 lg:h-30 bg-[#7226FF] rounded-r-full blur-3xl opacity-60 rotate-40 -translate-x-1/4 translate-y-10 overflow-hidden"/>
+                <div className="w-35 h-10 sm:w-62.5 sm:h-15 lg:w-112.5 lg:h-20 bg-[#A026FF] rounded-r-4xl rotate-40 blur-xl opacity-90 overflow-hidden"/>
             </div>
 
             {/* Right spotlight */}
-            <div className="absolute top-0 right-0 pointer-events-none translate-x-100 -translate-y-1/4">
-                <div className="w-190 h-30 bg-[#7226FF] rounded-r-full blur-3xl opacity-60 -rotate-40 -translate-x-20  translate-y-10"/>
-                <div className="w-120 h-15 bg-[#A026FF] rounded-r-4xl -rotate-40 blur-xl opacity-90"/>
+            <div className="absolute top-0 right-0 pointer-events-none translate-x-1/2 -translate-y-1/4">
+                <div className="w-62.5 h-20 sm:w-112.5 sm:h-25 lg:w-187.5 lg:h-30 bg-[#7226FF] rounded-r-full blur-3xl opacity-60 -rotate-40 -translate-x-20  translate-y-10 overflow-hidden"/>
+                <div className="w-35 h-10 sm:w-62.5 sm:h-15 lg:w-112.5 lg:h-20 bg-[#A026FF] rounded-r-4xl -rotate-40 blur-xl opacity-90 overflow-hidden"/>
             </div>
             
             
-            <div className="flex flex-col place-items-center pt-28 py-12 px-4 gap-6" ref={containerRef} >
+            <div className="flex flex-col place-items-center pt-24 pb-12 px-4 gap-6" ref={containerRef} >
                 <div  className="relative w-28 top-5 h-1 bg-[#A026FF] blur-sm"/>
                 <motion.h1 
                     className="text-4xl font-bold border-t-4"
@@ -146,7 +146,7 @@ export function SkillSec () {
 
             
             {/* Grid Boxes */}
-           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mx-24">
+           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 sm:px-8 lg:px-20 xl:px-24">
                 <motion.div style={{x: skillOneBox, opacity: skillOpacity}} >
                     <SkillCard title="Languages" data={languages} />
                 </motion.div>
@@ -161,7 +161,7 @@ export function SkillSec () {
                     style={{y: skillThreeBox, opacity: skillOpacity}}
                     
                 >
-                    <div className="w-full md:w-1/2">
+                    <div className="w-full lg:w-2/3 xl:w-1/2 pb-10">
                         <SkillCard title="Tools" data={tools} />
                     </div>
                 </motion.div>
