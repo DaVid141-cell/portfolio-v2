@@ -50,28 +50,28 @@ export function HeroSection () {
                         {/* First Name box */}
                         <motion.h1
                                 variants={fadeUp}
-                                className=" font-display lg:translate-y-15 xl:translate-y-15 leading-none text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-9xl whitespace-nowrap w-full"
+                                className=" font-display lg:translate-y-15 xl:translate-y-15 leading-none text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl whitespace-nowrap w-full"
                             >
                                 DAVID JUSTIN
                         </motion.h1>
 
                         <motion.div variants={fadeUp} className="max-w-md mx-auto lg:mx-0 text-center items-center">
-                            <h2 className="text-md sm:text-lg lg:text-xl xl:text-2xl 2xl:text-4xl font-bold whitespace-nowrap">
+                            <h2 className="text-md sm:text-lg lg:text-xl xl:text-2xl  font-bold whitespace-nowrap">
                                 Aspiring Full Stack Developer
                             </h2>
-                            <p className="text-sm sm:text-md lg:text-lg xl:text-xl 2xl:text-3xl font-bold mt-2">
+                            <p className="text-sm sm:text-md lg:text-lg xl:text-xl font-bold mt-2">
                                 Design • Build • Deliver
                             </p>
                         </motion.div>
                     </div>
                     
                     {/* Center image here */}
-                    <motion.div variants={fadeUp} className="flex justify-center order-first lg:order-0 translate-y-6 lg:translate-y-99 xl:translate-y-86 2xl:translate-y-66">
+                    <motion.div variants={fadeUp} className="flex justify-center order-first lg:order-0 translate-y-6 lg:translate-y-99 xl:translate-y-86 ">
                         <img
                             src="/images/me-anime.webp"
                             alt="David Justin"
                             loading="lazy"
-                            className="w-[320px] sm:w-125.5 md:w-150 lg:w-212.5 xl:w-120 2xl:w-260 select-none"
+                            className="w-[320px] sm:w-125.5 md:w-150 lg:w-212.5 xl:w-120 select-none"
                         />
                     </motion.div>
 
@@ -83,7 +83,7 @@ export function HeroSection () {
 
                         {/* Last Name box*/}
                         <motion.div variants={fadeUp}>
-                            <h1 className="font-display leading-none text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-9xl lg:translate-y-8 xl:translate-y-10 2xl:translate-y-40">
+                            <h1 className="font-display leading-none text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl sm:translate-y-10 lg:translate-y-8 xl:-translate-y-10 ">
                                 SERAD
                             </h1>
                         </motion.div>
