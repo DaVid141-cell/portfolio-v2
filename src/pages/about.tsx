@@ -28,7 +28,7 @@ export default function AboutPage () {
       
                 <div className="flex content-center-safe flex-col px-6 py-24 sm:px-10 lg:px-24 xl:px-40 lg:pt-80">
                     <div  className="relative w-32 sm:w-48 lg:w-65 left-3 h-1 bg-[#A026FF] blur-sm"/>
-                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold border-t-4 w-fit">
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold border-t-4 w-fit z-1">
                         EDUCATION
                     </h1>
                     <div className="w-full max-w-fit">
