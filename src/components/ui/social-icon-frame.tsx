@@ -19,14 +19,14 @@ export function SocialIconFrame() {
     const rotate = useTransform(springDragX, [80, -80], [30, -30])
 
     return (
-        <div className="flex flex-col items-center select-none">
+        <div className="flex flex-row lg:flex-col items-center select-none">
 
             {/* Top small outlined circle */}
             <Circle size={30} fill="none" color="white" />
 
             {/* This rotates together with the small circle at the bottom*/}
             <motion.div
-                className="flex flex-col items-center"
+                className="flex flex-row lg:flex-col items-center"
                 style={{
                     rotate,
                     originX: "50%",
@@ -34,8 +34,8 @@ export function SocialIconFrame() {
                 }}
             >
                 {SocialLinks.map((social, index) => (
-                    <div key={index} className="flex flex-col items-center">
-                        <div className="w-px bg-white" style={{ height: "30px" }} />
+                    <div key={index} className="flex flex-row lg:flex-col items-center">
+                        <div className="lg:w-px lg:h-7.5 h-px w-7.5 bg-white" />
                         <a
                             href={social.href}
                             target="_blank"
@@ -46,7 +46,7 @@ export function SocialIconFrame() {
                     </div>
                 ))}
 
-                <div className="w-px bg-white" style={{ height: "30px" }} />
+                <div className="lg:w-px lg:h-7.5 h-px w-7.5 bg-white" />
 
                 {/* this is a draggable circle */}
                 <motion.div
